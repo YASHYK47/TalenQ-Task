@@ -16,7 +16,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(
   upload({
-    limits: { fileSize: 100000000 },
+    limits: { fileSize: 1024*1024*1024 },
     abortOnLimit: true,
     responseOnLimit: "File size limit has been reached",
   })
