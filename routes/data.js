@@ -8,7 +8,7 @@ const {
 } = require("../controllers/data");
 
 //pass your query object as req.query
-router.get("/", async (req, res, next) => {
+router.get("/get", async (req, res, next) => {
   try {
     const data = await getData(req.query);
     res.json({

@@ -1,5 +1,6 @@
 const Data = require("../models/data");
 
+// to get specific data from  database collection
 const getData = async (query) => {
   try {
     const data = await Data.findOne(query);
@@ -12,6 +13,7 @@ const getData = async (query) => {
   }
 };
 
+// to remove Data from database collection
 const removeData = async (query) => {
   try {
     const data = await Data.findOneAndRemove(query);
@@ -24,6 +26,7 @@ const removeData = async (query) => {
   }
 };
 
+//to add data in database collection
 const addData = async (body) => {
   try {
     if (!body) {
@@ -37,6 +40,7 @@ const addData = async (body) => {
   }
 };
 
+// to update data in database collection
 const updateData = async (query, body) => {
   try {
     if (!body) {
